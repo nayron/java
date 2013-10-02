@@ -301,6 +301,15 @@ public class FmCarro extends javax.swing.JFrame {
         }
         Conexao.fecharConexao(con);
     }//GEN-LAST:event_btnPesquisarMouseClicked
+     private void tblConsultaMouseClicked(java.awt.event.MouseEvent evt) {
+        Integer linha = tblConsulta.getSelectedRow();
+        String placa = (String) tblConsulta.getValueAt(linha, 0);
+        String cor = (String) tblConsulta.getValueAt(linha, 1);
+        String descricao = (String) tblConsulta.getValueAt(linha, 2);
+        txtPlaca.setText(placa);
+        txtCor.setText(cor);
+        txtDescricao.setText(descricao);
+    }
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
         Connection con = Conexao.abrirConexao();
@@ -329,7 +338,7 @@ public class FmCarro extends javax.swing.JFrame {
         }
         Conexao.fecharConexao(con);
     }//GEN-LAST:event_btnExcluirActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
