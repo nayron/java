@@ -50,9 +50,9 @@ public class JFrameNayron extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jDBTable1 = new lib.jdb.control.jdbtable.JDBTable();
 
-        jDBConnection1.setURL("jdbc:mysql://127.0.0.1/livraria");
+        jDBConnection1.setURL("jdbc:mysql://127.0.0.1/autor");
         jDBConnection1.setDriver("com.mysql.jdbc.Driver");
-        jDBConnection1.setPassword("");
+        jDBConnection1.setPassword("abc123");
         jDBConnection1.setUserName("root");
 
         jDBQuery1.setJDBConnection(jDBConnection1);

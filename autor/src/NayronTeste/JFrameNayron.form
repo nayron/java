@@ -4,9 +4,9 @@
   <NonVisualComponents>
     <Component class="lib.jdb.connection.JDBConnection" name="jDBConnection1">
       <Properties>
-        <Property name="URL" type="java.lang.String" value="jdbc:mysql://127.0.0.1/livraria"/>
+        <Property name="URL" type="java.lang.String" value="jdbc:mysql://127.0.0.1/autor"/>
         <Property name="driver" type="java.lang.String" value="com.mysql.jdbc.Driver"/>
-        <Property name="password" type="java.lang.String" value=""/>
+        <Property name="password" type="java.lang.String" value="abc123"/>
         <Property name="userName" type="java.lang.String" value="root"/>
       </Properties>
     </Component>
