@@ -12,9 +12,8 @@ import java.util.*;
  * @author Náyron dos Anjos
  */
 public class Teste {
-
     public static void main(String[] args) {
-        Connection con = Conexao.abrirConexao();
+       /* Connection con = Conexao.abrirConexao();
         CarroBean cb = new CarroBean();
         CarroDAO cd = new CarroDAO(con);
         cb.setPlaca("JKK1900");
@@ -28,6 +27,7 @@ public class Teste {
                 System.out.println("Cor: " + carro.getCor());
                 System.out.println("Descrição:" + carro.getDescricao());
             }
-        }
+        */}
     }
-}
+    
+
