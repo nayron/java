@@ -48,21 +48,23 @@ public class CarroDAO {
         }
     }
 
-    public String alterar(CarroBean carro) {
-        String sql = "update carro set cor = ?,descricao = ?";
-        sql += " where placa = ?";
+    
+   public String alterar(CarroBean carro) {
+        String sql = "update carro set cor = ?,descricao = ? where placa = ?";
         try {
             PreparedStatement ps = getCon().prepareStatement(sql);
             ps.setString(1, carro.getCor());
             ps.setString(2, carro.getDescricao());
             ps.setString(3, carro.getPlaca());
+         
+        
             if (ps.executeUpdate() > 0) {
                 return "Alterado com sucesso.";
             } else {
                 return "Erro ao alterar";
             }
         } catch (SQLException e) {
-            return e.getMessage();
+           return e.getMessage();
         }
     }
 
@@ -111,4 +113,6 @@ public class CarroDAO {
             return null;
         }
     }
+
+    
 }
