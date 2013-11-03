@@ -24,8 +24,8 @@ public class JogadorDao extends DBConnection {
     }
 
     public void addJogador(Jogador jogador) throws SQLException {
-       //  String SQL = "insert into NAYRON.JOGADOR(nome,login,email,senha) values (?,?,?,?)";
-       String SQL = "insert into jogo1.jogador(nome,login,email,senha) values (?,?,?,?)";
+         String SQL = "insert into NAYRON.JOGADOR(nome,login,email,senha) values (?,?,?,?)";
+      // String SQL = "insert into jogo1.jogador(nome,login,email,senha) values (?,?,?,?)";
         PreparedStatement stmt = conn.prepareStatement(SQL);
 
         stmt.setString(1, jogador.getNome());
@@ -39,8 +39,8 @@ public class JogadorDao extends DBConnection {
     }
 
     public boolean deleteUsuario(int id) throws SQLException {
-       // String SQL = "DELETE FROM NAYRON.JOGADOR where id=?";
-        String SQL = "DELETE FROM jogo1.jogador WHERE id = ?";
+       String SQL = "DELETE FROM NAYRON.JOGADOR where id=?";
+        //String SQL = "DELETE FROM jogo1.jogador WHERE id = ?";
         PreparedStatement stmt = conn.prepareStatement(SQL);
 
         stmt.setInt(1, id);

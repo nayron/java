@@ -14,8 +14,8 @@ import java.sql.SQLException;
  */
 public class DBConnection {
     public Connection getMyDBConnection() throws ClassNotFoundException,SQLException{
-       // return DriverManager.getConnection("jdbc:derby://localhost:1527/jogo1","nayron","abc123");
-          return DriverManager.getConnection("jdbc:mysql://localhost:3306/jogo1","root","abc123");
+        return DriverManager.getConnection("jdbc:derby://localhost:1527/jogo1","nayron","abc123");
+         // return DriverManager.getConnection("jdbc:mysql://localhost:3306/jogo1","root","abc123");
     }
     
 }
