@@ -25,7 +25,7 @@ public class ContatoDao {
     }
 
     public void Adicionar(Contato c1) throws SQLException {
-        String sql = "INSERT INTO agendadb.contato (nome, endereco, telefone, email, sexo) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO agendadb.contatos (nome, endereco, telefone, email, sexo) VALUES (?,?,?,?,?)";
         PreparedStatement stmt = conexao.prepareStatement(sql);
         stmt.setString(1, c1.getNome());
         stmt.setString(2, c1.getEndereco());
@@ -43,7 +43,7 @@ public class ContatoDao {
      * @return @throws SQLException
      */
     public ArrayList<Contato> getLista() throws SQLException {
-        String sql = "select * from contato";
+        String sql = "select * from contatos";
         PreparedStatement stmt = this.conexao.prepareStatement(sql);
         ResultSet rs = stmt.executeQuery();
 
@@ -68,7 +68,7 @@ public class ContatoDao {
     }
 
     public boolean Altera(Contato c1) throws SQLException {
-        String sql = "UPDATE agendadb.contato SET nome=?, endereco=?, telefone=?, email=?, sexo=?"
+        String sql = "UPDATE agendadb.contatos SET nome=?, endereco=?, telefone=?, email=?, sexo=?"
                 + "where id=?";
         PreparedStatement stmt = conexao.prepareStatement(sql);
         stmt.setString(1, c1.getNome());
@@ -83,7 +83,7 @@ public class ContatoDao {
     }
 
     public boolean remove(int id) throws SQLException {
-        String slq = "DELETE FROM agendadb.contato WHERE id=?";
+        String slq = "DELETE FROM agendadb.contatos WHERE id=?";
         PreparedStatement stmt = conexao.prepareStatement(slq);
         stmt.setInt(1, id);
 

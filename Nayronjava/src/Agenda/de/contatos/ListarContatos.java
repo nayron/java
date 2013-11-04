@@ -171,7 +171,7 @@ public final class ListarContatos extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         try {
-            Contato u = Jogadores.get(jTable1.getColumnCount());
+            Contato u = Jogadores.get(jComboBox1.getSelectedIndex());
             
             ContatoDao dao = new ContatoDao();
 
