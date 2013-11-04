@@ -18,10 +18,12 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
  *
  * @author aluno
  */
-public class ListarUsuarios extends javax.swing.JFrame {
+public final class ListarUsuarios extends javax.swing.JFrame {
 
     /**
      * Creates new form ListarUsuarios
+     * @throws java.lang.ClassNotFoundException
+     * @throws java.sql.SQLException
      */
     public ListarUsuarios() throws ClassNotFoundException, SQLException {
         initComponents();
@@ -244,9 +246,7 @@ public class ListarUsuarios extends javax.swing.JFrame {
         String array[][] = new String[Jogadores.size()][4];
 
         int i = 0;
-
-        for (Iterator<Jogador> it = Jogadores.iterator(); it.hasNext();) {
-            Jogador jogadores = it.next();
+        for (Jogador jogadores : Jogadores) {
             array[i][0] = jogadores.getId() + "";
             array[i][1] = jogadores.getNome() + "";
             array[i][2] = jogadores.getLogin() + "";
