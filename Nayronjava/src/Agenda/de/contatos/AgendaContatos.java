@@ -6,6 +6,7 @@
 
 package Agenda.de.contatos;
 
+import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,6 +23,8 @@ public class AgendaContatos extends javax.swing.JFrame {
      */
     public AgendaContatos() {
         initComponents();
+        Dimension d = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setLocation((int) d.getWidth() / 2 - (this.getWidth() / 2), (int) d.getHeight() / 2 - (this.getHeight() / 2));
     }
 
     /**
