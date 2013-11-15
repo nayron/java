@@ -54,6 +54,7 @@ public final class ListarContatos extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
+        Voltar = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -118,7 +119,7 @@ public final class ListarContatos extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setText("Deletar");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +127,15 @@ public final class ListarContatos extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem2);
+
+        Voltar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.ALT_MASK));
+        Voltar.setText("Voltar ao Cadastro");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Voltar);
 
         jMenuBar1.add(jMenu1);
 
@@ -155,9 +165,9 @@ public final class ListarContatos extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         try {
-            Contato u =  Jogadores.get(jComboBox1.getSelectedIndex());
+            Contato u =  Jogadores.get(jTable1.getSelectedRow());
             
-            new AlterarContato(u ,this).setVisible(rootPaneCheckingEnabled);
+            new AlterarContato(u ,this).setVisible(true);
           preenchercomUsusario();
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(ListarContatos.class.getName()).log(Level.SEVERE, null, ex);
@@ -170,7 +180,7 @@ public final class ListarContatos extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         try {
-            Contato u = Jogadores.get(jComboBox1.getSelectedIndex());
+            Contato u = Jogadores.get(jTable1.getSelectedRow());
             
             ContatoDao dao = new ContatoDao();
 
@@ -189,6 +199,10 @@ public final class ListarContatos extends javax.swing.JFrame {
             Logger.getLogger(ListarContatos.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,6 +246,7 @@ public final class ListarContatos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Voltar;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
