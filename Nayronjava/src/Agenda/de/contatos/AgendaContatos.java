@@ -6,7 +6,7 @@
 
 package Agenda.de.contatos;
 
-import Nayron_agenda.Creditos;
+import Nayron_agenda_recente.Creditos;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.logging.Level;
