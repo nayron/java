@@ -21,6 +21,7 @@ public class CriarConexao {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/agendadb", "root", "abc123");
         
         
+        
 
     }
 

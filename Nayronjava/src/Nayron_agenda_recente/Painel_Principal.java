@@ -358,6 +358,9 @@ public class Painel_Principal extends javax.swing.JFrame {
     private void AlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlterarActionPerformed
         try {
             alteraContatos();
+             listarContatos();
+             DesabilitaDados();
+             listarContatos();
             mostrarPesquisa(contatos);
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Painel_Principal.class.getName()).log(Level.SEVERE, null, ex);
