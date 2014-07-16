@@ -151,9 +151,11 @@ public class TelaDeLogin extends javax.swing.JFrame {
         String senha = new String(jPSenha.getPassword());
         if (jTLogin.getText().equals("root") && senha.equals("abc123")) {
             try {
+               
                 Painel_Principal p = new Painel_Principal();
 
                 p.setVisible(true);
+                 this.dispose();
 
             } catch (ClassNotFoundException | SQLException ex) {
                 Logger.getLogger(TelaDeLogin.class.getName()).log(Level.SEVERE, null, ex);
