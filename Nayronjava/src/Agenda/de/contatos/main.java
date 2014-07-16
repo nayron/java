@@ -5,6 +5,9 @@
  */
 package Agenda.de.contatos;
 
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -12,9 +15,10 @@ package Agenda.de.contatos;
  */
 public class main {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException  {
 
-       
+       CriarConexao.getConexao();
+        JOptionPane.showMessageDialog(null,"Conexão aceita");
           
     }
 }

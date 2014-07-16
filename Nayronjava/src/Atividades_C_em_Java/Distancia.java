@@ -11,7 +11,7 @@ public class Distancia {
 	public static void main(String[] args) {
 	   
 		
-		/*float x1 = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite valor para X1","X1",JOptionPane.QUESTION_MESSAGE));
+		float x1 = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite valor para X1","X1",JOptionPane.QUESTION_MESSAGE));
 		float y1 = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite valor para Y1","Y1",JOptionPane.QUESTION_MESSAGE));
 		float x2 = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite valor para X2","X2",JOptionPane.QUESTION_MESSAGE));
 		float y2 = Float.parseFloat(JOptionPane.showInputDialog(null,"Digite valor para Y2","Y2",JOptionPane.QUESTION_MESSAGE));
@@ -19,10 +19,10 @@ public class Distancia {
 		float d = (float) Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2));
 		
 		System.out.println("Distancia = " + d);
-		*/
-            Biseccion c = new Biseccion();
-            double metodoDeBiseccion = c.metodoDeBiseccion(0, 1, 0.001);
-            System.out.println(metodoDeBiseccion);
+		
+            //Biseccion c = new Biseccion();
+            //double metodoDeBiseccion = c.metodoDeBiseccion(0, 1, 0.001);
+            //System.out.println(metodoDeBiseccion);
 		
 
 	}
