@@ -400,7 +400,7 @@ public class Painel_Principal extends javax.swing.JFrame {
         }
     }
 
-    public boolean VerificaDados() {
+   /* public boolean VerificaDados() {
         if (!jTnome.getText().equals("") && !jTEndereco.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Cadatro aceito com sucesso!!");
             return true;
@@ -408,8 +408,14 @@ public class Painel_Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor preencha o Nome e Endereco");
             return false;
         }
+    }*/
+    public boolean VerificaDados() {
+        if (jTnome.getText().equals("") && jTEndereco.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Por favor preencha o campo Nome e Endereço");
+           
+        } 
+        return true;
     }
-
     public void DesabilitaDados() {
         jTID.setEditable(false);
         jTEmail.setEditable(false);
