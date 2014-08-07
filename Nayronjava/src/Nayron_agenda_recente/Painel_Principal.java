@@ -326,6 +326,7 @@ public class Painel_Principal extends javax.swing.JFrame {
                 listarContatos();
                 DesabilitaDados();
                 listarContatos();
+                JOptionPane.showMessageDialog(rootPane, "Adicionado com sucesso!");
             } catch (    ClassNotFoundException | SQLException ex) {
                 Logger.getLogger(Painel_Principal.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -336,6 +337,7 @@ public class Painel_Principal extends javax.swing.JFrame {
     private void jBPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPesquisarActionPerformed
         try {
             listarContatos();
+            DesabilitaDados();
         } catch (ClassNotFoundException | SQLException ex) {
             JOptionPane.showMessageDialog(null, "Problemas com o campo de pesquisar" + ex);
         }
@@ -349,6 +351,7 @@ public class Painel_Principal extends javax.swing.JFrame {
         try {
             Excluircontato();
              listarContatos();
+             DesabilitaDados();
         } catch (ClassNotFoundException | SQLException ex) {
                JOptionPane.showMessageDialog(null, "Problemas com botão excluir");
         }
@@ -362,6 +365,7 @@ public class Painel_Principal extends javax.swing.JFrame {
              DesabilitaDados();
              listarContatos();
             mostrarPesquisa(contatos);
+            JOptionPane.showMessageDialog(rootPane, "Contato alterado com sucesso!");
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Painel_Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -395,6 +399,7 @@ public class Painel_Principal extends javax.swing.JFrame {
             c.setTelefone(jTTelefone.getText());
             ContatoDao cDao = new ContatoDao();
             cDao.Adicionar(c);
+            DesabilitaDados();
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Painel_Principal.class.getName()).log(Level.SEVERE, null, ex);
         }

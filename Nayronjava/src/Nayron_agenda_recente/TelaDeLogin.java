@@ -149,6 +149,8 @@ public class TelaDeLogin extends javax.swing.JFrame {
 
     private void jBLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLogarActionPerformed
         String senha = new String(jPSenha.getPassword());
+       jTLogin.setText("root");
+       jPSenha.setText("abc123");
         if (jTLogin.getText().equals("root") && senha.equals("abc123")) {
             try {
                
