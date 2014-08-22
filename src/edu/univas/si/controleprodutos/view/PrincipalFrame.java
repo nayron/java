@@ -16,6 +16,7 @@ import org.jvnet.substance.skin.SubstanceNebulaLookAndFeel;
 import org.jvnet.substance.skin.SubstanceRavenLookAndFeel;
 
 import edu.univas.si.controleprodutos.components.LabelImage;
+import javax.swing.SwingUtilities;
 
 public class PrincipalFrame extends JFrame{
 	
