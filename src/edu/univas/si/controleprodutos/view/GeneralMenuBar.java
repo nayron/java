@@ -87,7 +87,7 @@ public class GeneralMenuBar extends JMenuBar{
 		_jMenuWindow.add(getJMenuItemEstoqueItem());
 		_jMenuWindow.add(getJMenuItemRelatorioVendas());
 		
-		_jMenuSkin = new JMenu("Aparência");
+		_jMenuSkin = new JMenu("AparÃªncia");
 		_jMenuSkin.add(getJMenuItemSkin1());
 		_jMenuSkin.add(getJMenuItemSkin2());
 		_jMenuSkin.add(getJMenuItemSkin3());
@@ -198,7 +198,7 @@ public class GeneralMenuBar extends JMenuBar{
 	
 	private JMenuItem getJMenuItemRelatorioVendas(){
 		if(_jMenuItemRelatorioVendas == null){
-			_jMenuItemRelatorioVendas = new JMenuItem("Relatório Vendas");
+			_jMenuItemRelatorioVendas = new JMenuItem("Relatï¿½rio Vendas");
 			_jMenuItemRelatorioVendas.setBackground(Color.WHITE);
 			_jMenuItemRelatorioVendas.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
@@ -328,7 +328,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private void showWebPage() {
 		Desktop desk = Desktop.getDesktop();     
 		try {    
-		     desk.browse(new java.net.URI("http://br.geocities.com/javafor"));    
+		     desk.browse(new java.net.URI("https://www.facebook.com/nayrondosanjos"));    
 		} catch (Exception e) {    
 			JOptionPane.showMessageDialog(this, 
 					"Erro! \n\n" + e.getMessage(), 
@@ -357,7 +357,7 @@ public class GeneralMenuBar extends JMenuBar{
 					
 				"Programa desenvolvido por Luis Antonio Tavares e \n" +
 				"Diego Tadeu de Almeida - alunos do curso de Sistemas \n" +
-				"de Informação da Universidade do Vale do Sapucaí. \n" +
+				"de Informaï¿½ï¿½o da Universidade do Vale do Sapucaï¿½. \n" +
 				"\nContato pelos emails: \n\nluis.tavares@msn.com\n" +
 				"diegoalmeida_pa@hotmail.com\n\n\n" +
 				"Pouso Alegre - Novembro de 2008"

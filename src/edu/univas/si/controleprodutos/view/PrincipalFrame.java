@@ -28,7 +28,7 @@ public class PrincipalFrame extends JFrame{
 	
 	
 	private PrincipalFrame(){
-		super("Controle de Vendas e Estoque 1.2v");
+		super("Controle de Vendas e Estoque");
 		setContentPane(getJPanelMain());
 		setJMenuBar(getGeneralMenuBar());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
