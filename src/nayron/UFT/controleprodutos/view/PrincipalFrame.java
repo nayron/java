@@ -35,7 +35,7 @@ public class PrincipalFrame extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);			
 		setMinimumSize(new Dimension(600,400));
-		LabelImage labelImage = new LabelImage("/images/Controle.png");
+		LabelImage labelImage = new LabelImage("/images/Controle2.png");
 		setView(labelImage);
 		//labelImage.updateUI();
 		setVisible(true);

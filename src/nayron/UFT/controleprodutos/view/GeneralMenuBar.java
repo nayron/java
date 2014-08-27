@@ -60,7 +60,6 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem _jMenuItemSkin6;
 	
 	private JTextArea _jTextAreaSobre;
-	private JButton _jButtonWebPage;
 	private JPanel _jPanelSobre;
 	
 	private PrintableInterface _printable;
@@ -71,7 +70,7 @@ public class GeneralMenuBar extends JMenuBar{
 	public GeneralMenuBar(){
 		super();	
 		
-		setBackground(Color.BLUE);
+		setBackground(Color.gray);
 		
 		_jMenuArquivo = new JMenu("Arquivo");			
 		_jMenuArquivo.add(getJMenuItemImprimir());
@@ -108,7 +107,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemImprimir(){
 		if(_jMenuItemImprimir == null){
 			_jMenuItemImprimir = new JMenuItem("Imprimir");
-			_jMenuItemImprimir.setBackground(Color.WHITE);
+			_jMenuItemImprimir.setBackground(Color.gray);
 			_jMenuItemImprimir.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					_printable.printJTable();					
@@ -121,7 +120,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemSair(){
 		if(_jMenuItemSair == null){
 			_jMenuItemSair = new JMenuItem("Sair");
-			_jMenuItemSair.setBackground(Color.WHITE);
+			_jMenuItemSair.setBackground(Color.gray);
 			_jMenuItemSair.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					System.exit(0);					
@@ -134,7 +133,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemCalc(){
 		if(_jMenuItemCalc == null){
 			_jMenuItemCalc = new JMenuItem("Calculadora");
-			_jMenuItemCalc.setBackground(Color.RED);
+			_jMenuItemCalc.setBackground(Color.gray);
 			_jMenuItemCalc.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					showCalc();					
@@ -147,7 +146,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemAdicionaItem(){
 		if(_jMenuItemAdicionaItem == null){
 			_jMenuItemAdicionaItem = new JMenuItem("Adicionar Item");
-			_jMenuItemAdicionaItem.setBackground(Color.RED);
+			_jMenuItemAdicionaItem.setBackground(Color.gray);
 			_jMenuItemAdicionaItem.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					PrincipalFrame.setView(new AddItemPanel());					
@@ -160,7 +159,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemVendaItem(){
 		if(_jMenuItemVendaItem == null){
 			_jMenuItemVendaItem = new JMenuItem("Registrar Venda");
-			_jMenuItemVendaItem.setBackground(Color.RED);
+			_jMenuItemVendaItem.setBackground(Color.gray);
 			_jMenuItemVendaItem.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					PrincipalFrame.setView(new SalesPanel());					
@@ -173,7 +172,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemPesquisaItem(){
 		if(_jMenuItemPesquisaItem == null){
 			_jMenuItemPesquisaItem = new JMenuItem("Pesquisar Item");
-			_jMenuItemPesquisaItem.setBackground(Color.RED);
+			_jMenuItemPesquisaItem.setBackground(Color.gray);
 			_jMenuItemPesquisaItem.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					PrincipalFrame.setView(new SearchPanel());					
@@ -186,7 +185,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemEstoqueItem(){
 		if(_jMenuItemAtualizarItem == null){
 			_jMenuItemAtualizarItem = new JMenuItem("Atualizar Estoque");
-			_jMenuItemAtualizarItem.setBackground(Color.RED);
+			_jMenuItemAtualizarItem.setBackground(Color.gray);
 			_jMenuItemAtualizarItem.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					PrincipalFrame.setView(new StockPanel());					
@@ -199,7 +198,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemRelatorioVendas(){
 		if(_jMenuItemRelatorioVendas == null){
 			_jMenuItemRelatorioVendas = new JMenuItem("Relatorio Vendas");
-			_jMenuItemRelatorioVendas.setBackground(Color.RED);
+			_jMenuItemRelatorioVendas.setBackground(Color.gray);
 			_jMenuItemRelatorioVendas.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					PrincipalFrame.setView(new ReportPanel());					
@@ -212,7 +211,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemSkin1(){
 		if(_jMenuItemSkin1 == null){
 			_jMenuItemSkin1 = new JMenuItem("Business");
-			_jMenuItemSkin1.setBackground(Color.RED);
+			_jMenuItemSkin1.setBackground(Color.gray);
 			_jMenuItemSkin1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					defineLookAndFeel("Business");					
@@ -225,7 +224,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemSkin2(){
 		if(_jMenuItemSkin2 == null){
 			_jMenuItemSkin2 = new JMenuItem("Creme");
-			_jMenuItemSkin2.setBackground(Color.RED);
+			_jMenuItemSkin2.setBackground(Color.gray);
 			_jMenuItemSkin2.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					defineLookAndFeel("Creme");					
@@ -238,7 +237,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemSkin3(){
 		if(_jMenuItemSkin3 == null){
 			_jMenuItemSkin3 = new JMenuItem("Legacy");
-			_jMenuItemSkin3.setBackground(Color.RED);
+			_jMenuItemSkin3.setBackground(Color.gray);
 			_jMenuItemSkin3.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					defineLookAndFeel("Legacy");					
@@ -251,7 +250,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemSkin4(){
 		if(_jMenuItemSkin4 == null){
 			_jMenuItemSkin4 = new JMenuItem("Moderate");
-			_jMenuItemSkin4.setBackground(Color.RED);
+			_jMenuItemSkin4.setBackground(Color.gray);
 			_jMenuItemSkin4.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					defineLookAndFeel("Moderate");					
@@ -264,7 +263,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemSkin5(){
 		if(_jMenuItemSkin5 == null){
 			_jMenuItemSkin5 = new JMenuItem("Nebula");
-			_jMenuItemSkin5.setBackground(Color.RED);
+			_jMenuItemSkin5.setBackground(Color.gray);
 			_jMenuItemSkin5.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					defineLookAndFeel("Nebula");					
@@ -277,7 +276,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemSkin6(){
 		if(_jMenuItemSkin6 == null){
 			_jMenuItemSkin6 = new JMenuItem("Raven");
-			_jMenuItemSkin6.setBackground(Color.RED);
+			_jMenuItemSkin6.setBackground(Color.gray);
 			_jMenuItemSkin6.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					defineLookAndFeel("Raven");					
@@ -290,7 +289,7 @@ public class GeneralMenuBar extends JMenuBar{
 	private JMenuItem getJMenuItemSobre(){
 		if(_jMenuItemSobre == null){
 			_jMenuItemSobre = new JMenuItem("Sobre");
-			_jMenuItemSobre.setBackground(Color.RED);
+			_jMenuItemSobre.setBackground(Color.gray);
 			_jMenuItemSobre.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
 					showSobre();					
@@ -325,16 +324,7 @@ public class GeneralMenuBar extends JMenuBar{
 		PrincipalFrame.setView(getJPanelSobre());		
 	}
 	
-	private void showWebPage() {
-		Desktop desk = Desktop.getDesktop();     
-		try {    
-		     desk.browse(new java.net.URI("https://www.facebook.com/nayrondosanjos"));    
-		} catch (Exception e) {    
-			JOptionPane.showMessageDialog(this, 
-					"Erro! \n\n" + e.getMessage(), 
-					"Erro!", JOptionPane.WARNING_MESSAGE);    
-		}		
-	}
+	
 	
 	private void defineLookAndFeel(String lf) {
 		PrincipalFrame.setLookAndFeel(lf);	
@@ -377,14 +367,6 @@ public class GeneralMenuBar extends JMenuBar{
 		return _jTextAreaSobreGBC;
 	}
 	
-	private GridBagConstraints getJButtonWebPageGBC() {
-		if(_jButtonWebPageGBC == null){		
-			_jButtonWebPageGBC = new GridBagConstraints();
-			_jButtonWebPageGBC.gridx = 0;
-			_jButtonWebPageGBC.gridy = 1;	
-			_jButtonWebPageGBC.insets = new Insets(5,5,5,5);
-		}
-		return _jButtonWebPageGBC;
-	}
+	
 }
  
