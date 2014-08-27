@@ -235,7 +235,7 @@ public class StockPanel extends JPanel{
 		try {
 			produto = _produtoBI.searchProductsById(getJTextField().getText());
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(this, "Id inv�lido!"+e.getMessage(), 
+			JOptionPane.showMessageDialog(this, "Id inválido!"+e.getMessage(), 
 					"Erro!", JOptionPane.WARNING_MESSAGE);
 		}
 		if (produto!= null){
@@ -245,7 +245,7 @@ public class StockPanel extends JPanel{
 			getJLabelProduto().setText("Produto: " + produto.getNome());
 		}
 		else{
-			getJLabelProduto().setText("Id Inv�lido!");
+			getJLabelProduto().setText("Id Inválido!");
 		}
 	}
 	
@@ -257,12 +257,12 @@ public class StockPanel extends JPanel{
 			try {
 				foiAtualizado = _produtoBI.updateStock(id, qtd);
 			} catch (SQLException e) {
-				JOptionPane.showMessageDialog(this, "Id ou Qtd inv�lidos!"+e.getMessage(), 
+				JOptionPane.showMessageDialog(this, "Id ou Qtd inválidos!"+e.getMessage(), 
 						"Erro!", JOptionPane.WARNING_MESSAGE);
 			}
 		}
 		if (!foiAtualizado){
-			JOptionPane.showMessageDialog(this, "Id ou Qtd est�o inv�lidos!", 
+			JOptionPane.showMessageDialog(this, "Id ou Qtd estão inválidos!", 
 					"Erro!", JOptionPane.WARNING_MESSAGE);
 		}
 		else{

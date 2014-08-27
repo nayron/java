@@ -137,7 +137,7 @@ public class AddItemPanel extends JPanel {
 			_jPanelCadastro.setLayout(new GridBagLayout());
 			Border borda = BorderFactory.createRaisedBevelBorder();
 			borda = BorderFactory.createTitledBorder(borda,
-					"Digite as informa��es do produto: ");
+					"Digite as informações do produto: ");
 			_jPanelCadastro.setBorder(borda);
 			_jPanelCadastro.add(getJLabelID(), getJLabelIDGBC());
 			_jPanelCadastro.add(getJTextFieldID(), getJTextFieldIDGBC());
@@ -495,7 +495,7 @@ public class AddItemPanel extends JPanel {
 				_jTextFieldID.setText(String.format("%04d", id));	
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(this,
-						"N�o foi poss�vel gerar ID!\n" + e.getMessage(),
+						"Não foi possível gerar ID!\n" + e.getMessage(),
 						"Erro ao gerar ID!", JOptionPane.WARNING_MESSAGE);
 			}			
 		}
@@ -589,7 +589,7 @@ public class AddItemPanel extends JPanel {
 			produtosBI.addProduct(produto);
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this,
-					"Dado muito longo ou formato inv�lido!\n" + e.getMessage(),
+					"Dado muito longo ou formato inválido!\n" + e.getMessage(),
 					"Erro ao efetuar o cadastro!", JOptionPane.WARNING_MESSAGE);
 			isProductRegistered = false;
 		}
@@ -609,7 +609,7 @@ public class AddItemPanel extends JPanel {
 						String.format("%04d", Integer.parseInt(produtosBI.getNextId()) + 1));
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(this,
-						"N�o foi poss�vel gerar ID!\n" + e.getMessage(),
+						"Não foi possível gerar ID!\n" + e.getMessage(),
 						"Erro ao gerar ID!", JOptionPane.WARNING_MESSAGE);
 			}
 		}

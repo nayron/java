@@ -132,7 +132,7 @@ public class SalesGraphicPanel extends JPanel {
         cplot.setDomainGridlinesVisible(true);
 
         // return a new chart containing the overlaid plot...
-        JFreeChart chart = new JFreeChart("Valor das vendas realizadas no per�odo",
+        JFreeChart chart = new JFreeChart("Valor das vendas realizadas no período",
                 JFreeChart.DEFAULT_TITLE_FONT, cplot, false);
         chart.setBackgroundPaint(Color.white);
         LegendTitle legend = new LegendTitle(cplot);

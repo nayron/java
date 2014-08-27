@@ -382,7 +382,7 @@ public class SalesPanel extends JPanel implements PrintableInterface {
 		try {
 			int qtd = Integer.parseInt(_jTextFieldQTD.getText());
 			if (qtd < 1) {
-				JOptionPane.showMessageDialog(this, "Qtd inv�lida!", "Erro!",
+				JOptionPane.showMessageDialog(this, "Qtd inválida!", "Erro!",
 						JOptionPane.WARNING_MESSAGE);
 			} else {
 				Produto produto = _produtosBI.searchProductsById(idProduto);
@@ -395,7 +395,7 @@ public class SalesPanel extends JPanel implements PrintableInterface {
 				}
 			}
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(this, "Id ou Qtd inv�lidos!",
+			JOptionPane.showMessageDialog(this, "Id ou Qtd inválidos!",
 					"Erro!", JOptionPane.WARNING_MESSAGE);
 		}
 	}
@@ -437,14 +437,14 @@ public class SalesPanel extends JPanel implements PrintableInterface {
 
 		_tableModelItens = new GeneralTableModel();
 		_tableModelItens.setColumnIdentifiers(new String[] { "ID", "Nome",
-				"QTD", "Pre�o Total" });
+				"QTD", "Preço Total" });
 		_tableModelItens.setRowCount(0);
 
 		_tableItens = new JTable(_tableModelItens);
 		_tableItens.getColumn("ID").setMaxWidth(50);
 		_tableItens.getColumn("Nome").setMinWidth(90);
 		_tableItens.getColumn("QTD").setMaxWidth(70);
-		_tableItens.getColumn("Pre�o Total").setMaxWidth(70);
+		_tableItens.getColumn("Preço Total").setMaxWidth(70);
 
 		JScrollPane scrollPane = new JScrollPane(_tableItens);
 		panelTable.add(scrollPane, BorderLayout.CENTER);
@@ -513,7 +513,7 @@ public class SalesPanel extends JPanel implements PrintableInterface {
 	public void printJTable() {
 		try {
 			MessageFormat headerFormat = new MessageFormat(
-					"Relat�rio Compra - P�g. {0}");
+					"Relatório Compra - Pg. {0}");
 			MessageFormat footerFormat = new MessageFormat("Total: "
 					+ formatValue(getTotalVendido() + ""));
 			_tableItens.print(JTable.PrintMode.FIT_WIDTH, headerFormat,

@@ -89,7 +89,7 @@ public class ReportPanel extends JPanel implements PrintableInterface{
 	private JButton _jButtonGraphic;
 	private JButton _jButtonImprimir;
 	
-	private String[] _itensCombo = {" ","Ano","M�s","Per�odo","Listar todas"};
+	private String[] _itensCombo = {" ","Ano","M�s","Periodo","Listar todas"};
 	private VendasBI vendasBI;
 	
 	public ReportPanel() {
@@ -283,7 +283,7 @@ public class ReportPanel extends JPanel implements PrintableInterface{
 			_jLabelTitulo = new JLabel();
 			_jLabelTitulo.setFont(new Font("Arial", Font.BOLD, 18)); 
 			_jLabelTitulo.setForeground(new Color(51, 51, 255));
-			_jLabelTitulo.setText("Relat�rio de Vendas");
+			_jLabelTitulo.setText("Relatório de Vendas");
 			_jLabelTitulo.setHorizontalAlignment(0);
 		}
         return _jLabelTitulo;
@@ -305,7 +305,7 @@ public class ReportPanel extends JPanel implements PrintableInterface{
 	
 	private JLabel getJLabelMes(){
 		if(_jLabelMes == null){	
-			_jLabelMes = new JLabel("M�s: ");			
+			_jLabelMes = new JLabel("Mês: ");			
 		}
         return _jLabelMes;
 	}
@@ -326,7 +326,7 @@ public class ReportPanel extends JPanel implements PrintableInterface{
     
     private JButton getJButtonGraphic(){
 		if(_jButtonGraphic == null){	
-			_jButtonGraphic = new JButton("Gr�fico");
+			_jButtonGraphic = new JButton("Gráfico");
 			_jButtonGraphic.setIcon(new ImageIcon(getClass().getResource("/images/grafico.png")));
 			_jButtonGraphic.addActionListener(new ActionListener(){
 
@@ -374,7 +374,7 @@ public class ReportPanel extends JPanel implements PrintableInterface{
 						getJLabelDataFim().setVisible(false);
 						getJXDatePickerDataIni().setVisible(false);
 						getJXDatePickerDataFim().setVisible(false);
-					}else if(_jComboBoxPeriodo.getSelectedItem().toString().equals("Per�odo")){
+					}else if(_jComboBoxPeriodo.getSelectedItem().toString().equals("Período")){
 						getJComboBoxAno().setVisible(false);
 						getJLabelAno().setVisible(false);
 						getJComboBoxMes().setVisible(false);
@@ -383,7 +383,7 @@ public class ReportPanel extends JPanel implements PrintableInterface{
 						getJLabelDataFim().setVisible(true);
 						getJXDatePickerDataIni().setVisible(true);
 						getJXDatePickerDataFim().setVisible(true);
-					}else if(_jComboBoxPeriodo.getSelectedItem().toString().equals("M�s")){
+					}else if(_jComboBoxPeriodo.getSelectedItem().toString().equals("Mês")){
 						getJComboBoxAno().setSelectedIndex(0);
 						getJComboBoxAno().setVisible(true);	
 						getJLabelAno().setVisible(true);	
@@ -425,7 +425,7 @@ public class ReportPanel extends JPanel implements PrintableInterface{
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					if (getJComboBoxPeriodo().getSelectedItem().toString().equals("M�s")){
+					if (getJComboBoxPeriodo().getSelectedItem().toString().equals("Mês")){
 						getJComboBoxMes().setSelectedIndex(0);
 						getJComboBoxMes().setVisible(true);
 						getJLabelMes().setVisible(true);

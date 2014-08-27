@@ -239,7 +239,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 				}
 			} catch (SQLException e1) {
 				JOptionPane.showMessageDialog(this,
-						"N�o foi poss�vel listar os produtos!\n" + e1.getMessage(),
+						"Não foi possível listar os produtos!\n" + e1.getMessage(),
 						"Erro!", JOptionPane.WARNING_MESSAGE);
 			}
 			break;
@@ -256,7 +256,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 				}
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(this,
-						"ID Inv�lido! Tente novamente.\n\n" + e.getMessage(),
+						"ID Inválido! Tente novamente.\n\n" + e.getMessage(),
 						"Erro!", JOptionPane.WARNING_MESSAGE);
 			}
 			break;
@@ -266,7 +266,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 				produtos = _produtosBI.searchProductByName(getJTextField().getText());
 			} catch (SQLException e) {
 				JOptionPane.showMessageDialog(this,
-						"Nome inv�lido! Tente novamente.\n\n" + e.getMessage(),
+						"Nome inválido! Tente novamente.\n\n" + e.getMessage(),
 						"Erro!", JOptionPane.WARNING_MESSAGE);
 			}
 			for (Produto prod : produtos) {
@@ -281,7 +281,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 				produtos = _produtosBI.searchProductByMark(getJTextField().getText());
 			} catch (SQLException e) {
 				JOptionPane.showMessageDialog(this,
-						"Marca inv�lida! Tente novamente.\n\n" + e.getMessage(),
+						"Marca inválida! Tente novamente.\n\n" + e.getMessage(),
 						"Erro!", JOptionPane.WARNING_MESSAGE);
 			}
 			for (Produto prod : produtos) {
@@ -296,7 +296,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 				produtos = _produtosBI.searchProductByModel(getJTextField().getText());
 			} catch (SQLException e) {
 				JOptionPane.showMessageDialog(this,
-						"Modelo inv�lido! Tente novamente.\n\n" + e.getMessage(),
+						"Modelo inválido! Tente novamente.\n\n" + e.getMessage(),
 						"Erro!", JOptionPane.WARNING_MESSAGE);
 			}
 			for (Produto prod : produtos) {
@@ -311,7 +311,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 				produtos = _produtosBI.searchProductByType(getJTextField().getText());
 			} catch (SQLException e) {
 				JOptionPane.showMessageDialog(this,
-						"Tipo inv�lido! Tente novamente.\n\n" + e.getMessage(),
+						"Tipo inválido! Tente novamente.\n\n" + e.getMessage(),
 						"Erro!", JOptionPane.WARNING_MESSAGE);
 			}
 			for (Produto prod : produtos) {
@@ -408,7 +408,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 		if (_tableModelItens == null) {
 			_tableModelItens = new GeneralTableModel();
 			_tableModelItens.setColumnIdentifiers(new String[] { "ID", "Nome",
-					"Marca", "Modelo", "Tipo", "Pre�o", "QTD" });			
+					"Marca", "Modelo", "Tipo", "Preço", "QTD" });			
 		}
 		return _tableModelItens;
 	}
@@ -421,7 +421,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 			_tableItens.getColumn("Marca").setMinWidth(110);
 			_tableItens.getColumn("Modelo").setMinWidth(110);
 			_tableItens.getColumn("Tipo").setMaxWidth(100);
-			_tableItens.getColumn("Pre�o").setMaxWidth(90);
+			_tableItens.getColumn("Preço").setMaxWidth(90);
 			_tableItens.getColumn("QTD").setMaxWidth(90);
 			_tableItens.setMaximumSize(new Dimension(500,200));
 			_tableItens.addMouseListener(new MouseListener() {
@@ -564,7 +564,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 		if (_jTextArea == null) {
 			Border borda = BorderFactory.createRaisedBevelBorder();
 			borda = BorderFactory.createTitledBorder(borda,
-					"Descri��o do Item: ");
+					"Descrição do Item: ");
 			_jTextArea = new JTextArea(2,50);		
 			_jTextArea.setEditable(false);
 			_jTextArea.setBorder(borda);
@@ -576,7 +576,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 		
 		int resposta = JOptionPane.showConfirmDialog(null,
 				"Deseja realmente excluir este item?",
-				"Confirma��o de exclus�o",
+				"Confirmação de exclusão",
 				JOptionPane.YES_NO_OPTION,
 				JOptionPane.QUESTION_MESSAGE);
 		if (resposta == 0){
@@ -648,7 +648,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 	public void printJTable() {
 		try {
 			MessageFormat headerFormat = new MessageFormat(
-					"Relat�rio - Produtos");
+					"Relatório - Produtos");
 			MessageFormat footerFormat = new MessageFormat("- {0} -");
 			getJTableItens().print(JTable.PrintMode.FIT_WIDTH, headerFormat,
 					footerFormat);
