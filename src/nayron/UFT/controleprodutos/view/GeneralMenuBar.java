@@ -76,10 +76,10 @@ public class GeneralMenuBar extends JMenuBar{
 		_jMenuArquivo.add(getJMenuItemImprimir());
 		_jMenuArquivo.add(getJMenuItemSair());
 		
-		_jMenuFerramentas = new JMenu("Ferramentas");
+		_jMenuFerramentas = new JMenu("Calculadora");
 		_jMenuFerramentas.add(getJMenuItemCalc());
 		
-		_jMenuWindow = new JMenu("Window");			
+		_jMenuWindow = new JMenu("Ferramentas");			
 		_jMenuWindow.add(getJMenuItemAdicionaItem());
 		_jMenuWindow.add(getJMenuItemVendaItem());
 		_jMenuWindow.add(getJMenuItemPesquisaItem());
