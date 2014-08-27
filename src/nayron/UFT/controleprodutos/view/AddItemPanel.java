@@ -383,7 +383,7 @@ public class AddItemPanel extends JPanel {
 	private JLabel getJLabelPreco() {
 		if (_jLabelPreco == null) {
 			_jLabelPreco = new JLabel();
-			_jLabelPreco.setText("Pre�o:");
+			_jLabelPreco.setText("Preço:");
 		}
 		return _jLabelPreco;
 	}
