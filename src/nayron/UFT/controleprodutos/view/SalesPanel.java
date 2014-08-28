@@ -369,7 +369,7 @@ public class SalesPanel extends JPanel implements PrintableInterface {
 						"Venda registrada!", JOptionPane.INFORMATION_MESSAGE);
 			} catch (Exception e) {
 				JOptionPane.showMessageDialog(this,
-						"A venda n�o pode ser registrada!", "Erro!",
+						"A venda não pode ser registrada!", "Erro!",
 						JOptionPane.WARNING_MESSAGE);
 			}
 

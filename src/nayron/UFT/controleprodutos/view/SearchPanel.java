@@ -564,7 +564,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 		if (_jTextArea == null) {
 			Border borda = BorderFactory.createRaisedBevelBorder();
 			borda = BorderFactory.createTitledBorder(borda,
-					"Descrição do Item: ");
+					"Descricao do Item ");
 			_jTextArea = new JTextArea(2,50);		
 			_jTextArea.setEditable(false);
 			_jTextArea.setBorder(borda);
