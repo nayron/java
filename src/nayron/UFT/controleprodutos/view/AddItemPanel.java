@@ -423,7 +423,7 @@ public class AddItemPanel extends JPanel {
 	private JLabel getJLabelDescricao() {
 		if (_jLabelDescricao == null) {
 			_jLabelDescricao = new JLabel();
-			_jLabelDescricao.setText("Descri��o:");
+			_jLabelDescricao.setText("Descrição:");
 		}
 		return _jLabelDescricao;
 	}
