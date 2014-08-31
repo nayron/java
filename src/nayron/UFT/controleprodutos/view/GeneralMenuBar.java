@@ -210,11 +210,11 @@ public class GeneralMenuBar extends JMenuBar{
 	
 	private JMenuItem getJMenuItemSkin1(){
 		if(_jMenuItemSkin1 == null){
-			_jMenuItemSkin1 = new JMenuItem("Business");
+			_jMenuItemSkin1 = new JMenuItem("Esmeralda");
 			_jMenuItemSkin1.setBackground(Color.gray);
 			_jMenuItemSkin1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
-					defineLookAndFeel("Business");					
+					defineLookAndFeel("Esmeralda");					
 				}				
 			});
 		}
@@ -223,11 +223,11 @@ public class GeneralMenuBar extends JMenuBar{
 	
 	private JMenuItem getJMenuItemSkin2(){
 		if(_jMenuItemSkin2 == null){
-			_jMenuItemSkin2 = new JMenuItem("Creme");
+			_jMenuItemSkin2 = new JMenuItem("OfficeBlue2007");
 			_jMenuItemSkin2.setBackground(Color.gray);
 			_jMenuItemSkin2.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
-					defineLookAndFeel("Creme");					
+					defineLookAndFeel("OfficeBlue2007");					
 				}				
 			});
 		}
@@ -249,11 +249,11 @@ public class GeneralMenuBar extends JMenuBar{
 	
 	private JMenuItem getJMenuItemSkin4(){
 		if(_jMenuItemSkin4 == null){
-			_jMenuItemSkin4 = new JMenuItem("Moderate");
+			_jMenuItemSkin4 = new JMenuItem("OfficeSilver2007");
 			_jMenuItemSkin4.setBackground(Color.gray);
 			_jMenuItemSkin4.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
-					defineLookAndFeel("Moderate");					
+					defineLookAndFeel("OfficeSilver2007");					
 				}				
 			});
 		}
@@ -262,11 +262,11 @@ public class GeneralMenuBar extends JMenuBar{
 	
 	private JMenuItem getJMenuItemSkin5(){
 		if(_jMenuItemSkin5 == null){
-			_jMenuItemSkin5 = new JMenuItem("Nebula");
+			_jMenuItemSkin5 = new JMenuItem("Magma");
 			_jMenuItemSkin5.setBackground(Color.gray);
 			_jMenuItemSkin5.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
-					defineLookAndFeel("Nebula");					
+					defineLookAndFeel("Magma");					
 				}				
 			});
 		}

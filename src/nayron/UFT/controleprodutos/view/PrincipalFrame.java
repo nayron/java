@@ -17,6 +17,13 @@ import org.jvnet.substance.skin.SubstanceRavenLookAndFeel;
 
 import nayron.UFT.controleprodutos.components.LabelImage;
 import javax.swing.SwingUtilities;
+import org.jvnet.substance.skin.SubstanceEmeraldDuskLookAndFeel;
+import org.jvnet.substance.skin.SubstanceMagmaLookAndFeel;
+import org.jvnet.substance.skin.SubstanceMistSilverLookAndFeel;
+import org.jvnet.substance.skin.SubstanceOfficeBlue2007LookAndFeel;
+import org.jvnet.substance.skin.SubstanceOfficeSilver2007LookAndFeel;
+import org.jvnet.substance.skin.SubstanceRavenGraphiteLookAndFeel;
+import org.jvnet.substance.skin.SubstanceSaharaLookAndFeel;
 
 public class PrincipalFrame extends JFrame{
 	
@@ -82,16 +89,16 @@ public class PrincipalFrame extends JFrame{
 	public static void setLookAndFeel(String lookAndFeel){				
 		setDefaultLookAndFeelDecorated(true);
 	    try {
-	    	if (lookAndFeel.equals("Business")){
-	    		UIManager.setLookAndFeel(new SubstanceBusinessLookAndFeel());
-			}else if (lookAndFeel.equals("Creme")){
-	    		UIManager.setLookAndFeel(new SubstanceCremeLookAndFeel());
+	    	if (lookAndFeel.equals("Esmeralda")){
+                        UIManager.setLookAndFeel(new SubstanceEmeraldDuskLookAndFeel());
+			}else if (lookAndFeel.equals("OfficeBlue2007")){
+                        UIManager.setLookAndFeel(new SubstanceOfficeBlue2007LookAndFeel());
 			}else if (lookAndFeel.equals("Legacy")){
 		    	UIManager.setLookAndFeel(new SubstanceLegacyDefaultLookAndFeel());				
-			}else if (lookAndFeel.equals("Moderate")){
-	    		UIManager.setLookAndFeel(new SubstanceModerateLookAndFeel());
-			}else if (lookAndFeel.equals("Nebula")){
-				UIManager.setLookAndFeel(new SubstanceNebulaLookAndFeel());
+			}else if (lookAndFeel.equals("OfficeSilver2007")){
+	    		UIManager.setLookAndFeel(new SubstanceOfficeSilver2007LookAndFeel());
+			}else if (lookAndFeel.equals("Magma")){
+				UIManager.setLookAndFeel(new SubstanceMagmaLookAndFeel());
 			}else if (lookAndFeel.equals("Raven")){
 		    		UIManager.setLookAndFeel(new SubstanceRavenLookAndFeel());
 			}
