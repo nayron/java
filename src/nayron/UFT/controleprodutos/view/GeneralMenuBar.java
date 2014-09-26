@@ -19,6 +19,8 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -175,7 +177,11 @@ public class GeneralMenuBar extends JMenuBar{
 			_jMenuItemPesquisaItem.setBackground(Color.gray);
 			_jMenuItemPesquisaItem.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e) {
-					PrincipalFrame.setView(new SearchPanel());					
+                                    try {					
+                                        PrincipalFrame.setView(new SearchPanel());
+                                    } catch (ClassNotFoundException ex) {
+                                        Logger.getLogger(GeneralMenuBar.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
 				}				
 			});
 		}

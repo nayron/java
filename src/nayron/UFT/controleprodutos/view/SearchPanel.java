@@ -21,6 +21,8 @@ import java.awt.print.PrinterException;
 import java.sql.SQLException;
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
@@ -86,7 +88,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 
 	private int _tipoPesquisa = 0;
 
-	public SearchPanel() {
+	public SearchPanel() throws ClassNotFoundException {
 		super();
 		PrincipalFrame.setViewToPrint(this);
 		_produtosBI = new ProdutosBI();
@@ -219,7 +221,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 		return _jTextFieldGBC;
 	}
 
-	private void atualisaTable() {
+	private void atualisaTable() throws ClassNotFoundException {
 		int rowsCount = getGeneralTableModel().getRowCount();
 		for (int i = 0; i < rowsCount; i++) {
 			getGeneralTableModel().removeRow(0);
@@ -366,7 +368,11 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 			_jButtonOK.addActionListener(new ActionListener() {
 
 				public void actionPerformed(ActionEvent e) {
-					atualisaTable();
+                                    try {
+                                        atualisaTable();
+                                    } catch (ClassNotFoundException ex) {
+                                        Logger.getLogger(SearchPanel.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
 				}
 
 			});
@@ -381,7 +387,11 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 			_jButtonEditar.addActionListener(new ActionListener() {
 
 				public void actionPerformed(ActionEvent e) {
-					editItem();
+                                    try {
+                                        editItem();
+                                    } catch (ClassNotFoundException ex) {
+                                        Logger.getLogger(SearchPanel.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
 				}
 
 			});
@@ -397,7 +407,11 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 
 				public void actionPerformed(ActionEvent e) {
 				
-					removeItem();
+                                    try {
+                                        removeItem();
+                                    } catch (ClassNotFoundException ex) {
+                                        Logger.getLogger(SearchPanel.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
 				}
 			});
 		}
@@ -532,7 +546,11 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 					_tipoPesquisa = 0;
 					_jTextField.setEditable(false);
 					_jTextField.setText("");
-					atualisaTable();
+                                    try {
+                                        atualisaTable();
+                                    } catch (ClassNotFoundException ex) {
+                                        Logger.getLogger(SearchPanel.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
 				}
 
 			});
@@ -572,7 +590,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 		return _jTextArea;
 	}
 	
-	private void removeItem(){
+	private void removeItem() throws ClassNotFoundException{
 		
 		int resposta = JOptionPane.showConfirmDialog(null,
 				"Deseja realmente excluir este item?",
@@ -605,7 +623,7 @@ public class SearchPanel extends JPanel implements PrintableInterface {
 		}
 	}	
 
-	private void editItem() {
+	private void editItem() throws ClassNotFoundException {
 		int selectedRow = getJTableItens().getSelectedRow();
 		String id = null;
 		try {

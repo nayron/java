@@ -9,6 +9,8 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -201,7 +203,11 @@ public class StockPanel extends JPanel{
 			_jButtonID.addActionListener(new ActionListener(){
 
 				public void actionPerformed(ActionEvent e) {
-					buscaEstoque();					
+                                    try {					
+                                        buscaEstoque();
+                                    } catch (ClassNotFoundException ex) {
+                                        Logger.getLogger(StockPanel.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
 				}				
 			});
 		}
@@ -215,7 +221,11 @@ public class StockPanel extends JPanel{
 			_jButtonAtualisar.addActionListener(new ActionListener(){
 
 				public void actionPerformed(ActionEvent e) {
-					atualisaEstoque();					
+                                    try {					
+                                        atualisaEstoque();
+                                    } catch (ClassNotFoundException ex) {
+                                        Logger.getLogger(StockPanel.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
 				}				
 			});
 		}
@@ -230,7 +240,7 @@ public class StockPanel extends JPanel{
 		return _jSpinnerStoque;
 	}
 	
-	protected void buscaEstoque() {
+	protected void buscaEstoque() throws ClassNotFoundException {
 		Produto produto = null;
 		try {
 			produto = _produtoBI.searchProductsById(getJTextField().getText());
@@ -249,7 +259,7 @@ public class StockPanel extends JPanel{
 		}
 	}
 	
-	protected void atualisaEstoque() {
+	protected void atualisaEstoque() throws ClassNotFoundException {
 		int qtd = (Integer)getJSpinner().getValue();
 		String id = getJTextField().getText();
 		boolean foiAtualizado = false;

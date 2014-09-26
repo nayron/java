@@ -7,6 +7,8 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -451,7 +453,11 @@ public class AddItemPanel extends JPanel {
 			_jButtonSalvar
 					.addActionListener(new java.awt.event.ActionListener() {
 						public void actionPerformed(java.awt.event.ActionEvent e) {
-							cadastrarProduto();
+                                                    try {
+                                                        cadastrarProduto();
+                                                    } catch (ClassNotFoundException ex) {
+                                                        Logger.getLogger(AddItemPanel.class.getName()).log(Level.SEVERE, null, ex);
+                                                    }
 						}
 					});
 		}
@@ -562,7 +568,7 @@ public class AddItemPanel extends JPanel {
 		return _jTextAreaDescricao;
 	}
 
-	private void cadastrarProduto() {
+	private void cadastrarProduto() throws ClassNotFoundException {
 		Produto produto = new Produto();
 		float preco;
 		try {

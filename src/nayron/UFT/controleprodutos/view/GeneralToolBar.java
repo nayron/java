@@ -4,6 +4,8 @@ package nayron.UFT.controleprodutos.view;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -36,7 +38,11 @@ public class GeneralToolBar extends JToolBar{
 		jButtonPesquisar.setIcon(new ImageIcon(getClass().getResource("/images/pesquisar22.png")));
 		jButtonPesquisar.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent evt){
-				viewPesquisaItem();
+                            try {
+                                viewPesquisaItem();
+                            } catch (ClassNotFoundException ex) {
+                                Logger.getLogger(GeneralToolBar.class.getName()).log(Level.SEVERE, null, ex);
+                            }
 			}			
 		});
 		
@@ -112,7 +118,7 @@ public class GeneralToolBar extends JToolBar{
 		PrincipalFrame.setView(new AddItemPanel());		
 	}
 	
-	private void viewPesquisaItem() {
+	private void viewPesquisaItem() throws ClassNotFoundException {
 		PrincipalFrame.setView(new SearchPanel());		
 	}
 	
