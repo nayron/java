@@ -12,7 +12,7 @@ import nayron.UFT.controleprodutos.model.Venda;
 public class VendasDAO {
 	private DataConnection _dataConection = new DataConnection();
 
-	public boolean searchByDate(Date date) throws SQLException {
+	public boolean searchByDate(Date date) throws SQLException, ClassNotFoundException {
 		boolean isDateThere = false;
 		PreparedStatement psm = _dataConection.getConnection()
 				.prepareStatement("SELECT * FROM VENDA WHERE Data = ?");
@@ -28,7 +28,7 @@ public class VendasDAO {
 	}
 
 	public ArrayList<Venda> searchByPeriod(Date dateIni, Date dateFin)
-			throws SQLException {
+			throws SQLException, ClassNotFoundException {
 		ArrayList<Venda> vendas = new ArrayList<Venda>();
 		PreparedStatement psm = _dataConection.getConnection()
 				.prepareStatement(
@@ -74,7 +74,7 @@ public class VendasDAO {
 		closeConnection();
 	}
 
-	public ArrayList<Venda> list() throws SQLException {
+	public ArrayList<Venda> list() throws SQLException, ClassNotFoundException {
 		ArrayList<Venda> vendas = new ArrayList<Venda>();
 		String sql = "SELECT * FROM VENDA";
 		Statement stm = _dataConection.getConnection()
@@ -93,7 +93,7 @@ public class VendasDAO {
 		return vendas;
 	}
 	
-	private void closeConnection() throws SQLException {
+	private void closeConnection() throws SQLException, ClassNotFoundException {
 		_dataConection.getConnection().close();		
 	}
 }

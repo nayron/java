@@ -12,7 +12,7 @@ import nayron.UFT.controleprodutos.model.Produto;
 public class ProdutosDAO {
 	private DataConnection _dataConection = new DataConnection();
 
-	public void insert(Produto produto) throws SQLException {
+	public void insert(Produto produto) throws SQLException, ClassNotFoundException {
 		PreparedStatement psm = null;
 		psm = _dataConection
 				.getConnection()
@@ -32,7 +32,7 @@ public class ProdutosDAO {
 		closeConnection();
 	}
 	
-	public void update(Produto produto) throws SQLException {
+	public void update(Produto produto) throws SQLException, ClassNotFoundException {
 		PreparedStatement psm = null;
 		psm = _dataConection
 				.getConnection()
@@ -52,7 +52,7 @@ public class ProdutosDAO {
 		closeConnection();
 	}
 
-	public ArrayList<Produto> list() throws SQLException {
+	public ArrayList<Produto> list() throws SQLException, ClassNotFoundException {
 		ArrayList<Produto> produtos = new ArrayList<Produto>();
 		PreparedStatement psm = _dataConection.getConnection()
 				.prepareStatement("SELECT * FROM PRODUTO ORDER BY ProdutoId");
@@ -75,7 +75,7 @@ public class ProdutosDAO {
 		return produtos;
 	}
 
-	public void remove(String id) throws SQLException {
+	public void remove(String id) throws SQLException, ClassNotFoundException {
 		PreparedStatement psm = _dataConection.getConnection()
 				.prepareStatement("DELETE FROM PRODUTO WHERE ProdutoId = ?");
 		psm.setString(1, id);
@@ -84,7 +84,7 @@ public class ProdutosDAO {
 		closeConnection();
 	}
 
-	public String getMaxId() throws SQLException {
+	public String getMaxId() throws SQLException, ClassNotFoundException {
 		String sql = "SELECT MAX(ProdutoId) FROM PRODUTO";
 		Statement stm = _dataConection.getConnection().createStatement();
 		ResultSet rs = stm.executeQuery(sql);
@@ -99,7 +99,7 @@ public class ProdutosDAO {
 		return maxID;		
 	}
 
-	public Produto searchById(String id) throws SQLException {
+	public Produto searchById(String id) throws SQLException, ClassNotFoundException {
 		PreparedStatement psm = _dataConection.getConnection()
 				.prepareStatement("SELECT * FROM PRODUTO WHERE ProdutoId = ?");
 		psm.setString(1, id);
@@ -123,7 +123,7 @@ public class ProdutosDAO {
 		return produto;
 	}
 
-	public ArrayList<Produto> search(int typeSearch, String str) throws SQLException {
+	public ArrayList<Produto> search(int typeSearch, String str) throws SQLException, ClassNotFoundException {
 		ArrayList<Produto> produtos = new ArrayList<Produto>();
 		PreparedStatement psm = _dataConection.getConnection()
 				.prepareStatement(getSearchQuery(typeSearch));
@@ -147,7 +147,7 @@ public class ProdutosDAO {
 		return produtos;
 	}
 
-	public boolean stockUpdate(String id, int qtd) throws SQLException {
+	public boolean stockUpdate(String id, int qtd) throws SQLException, ClassNotFoundException {
 		if (searchById(id) == null) { // caso nao exita este id
 			return false;
 		}
@@ -182,7 +182,7 @@ public class ProdutosDAO {
 		return sql;
 	}
 	
-	private void closeConnection() throws SQLException {
+	private void closeConnection() throws SQLException, ClassNotFoundException {
 		_dataConection.getConnection().close();		
 	}
 }

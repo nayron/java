@@ -18,61 +18,8 @@ import java.sql.SQLException;
 
 public class DataConnection {
 
-	protected static Connection con = null;
+    public static Connection getConnection() throws ClassNotFoundException, SQLException {
 
-	private String _userName = null;
-	private String _password = null;
-	private String _url = null;
-	private String _jdbcDriver = null;
-
-	public DataConnection() {
-		_userName = "postgres";
-		_password = "database";
-		_url = "jdbc:postgresql://localhost:5432/postgres";
-		_jdbcDriver = "org.postgresql.Driver";
-	}
-
-	/**
-	 * Conecta com o banco.
-	 * 
-	 * @return con conex�o estabelecida.
-	 */
-
-	public Connection getConnection() {
-		try {
-			if (con == null) {
-
-				Class.forName(_jdbcDriver);
-				con = DriverManager.getConnection(_url, _userName, _password);
-
-			} else if (con.isClosed()) {
-				con = null;
-				return getConnection();
-			}
-		} catch (ClassNotFoundException e) {
-			System.out.print("ClassNotFoundException: ");
-			System.out.println(e.getMessage());
-
-		} catch (SQLException e) {
-			System.out.print("SQLException: ");
-			System.out.println(e.getMessage());
-		}
-		return con;
-	}
-
-	/**
-	 * Encerra a conectividade com o banco.
-	 * 
-	 */
-	public void closeConnection() {
-		if (con != null) {
-			try {
-				con.close();
-			} catch (SQLException e) {
-				System.out.print("SQLException: ");
-				System.out.println(e.getMessage());
-			}
-		}
-	}
-
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/controle", "root", "abc123");
+    }
 }

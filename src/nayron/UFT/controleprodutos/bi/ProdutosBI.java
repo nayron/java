@@ -28,38 +28,38 @@ public class ProdutosBI {
 		}		
 	}
 	
-	public ArrayList<Produto> listProducts() throws SQLException{
+	public ArrayList<Produto> listProducts() throws SQLException, ClassNotFoundException{
 		return _produtosDAO.list();
 	}
 	
-	public Produto searchProductsById(String productId) throws SQLException{
+	public Produto searchProductsById(String productId) throws SQLException, ClassNotFoundException{
 		return _produtosDAO.searchById(productId);
 	}
 	
-	public ArrayList<Produto> searchProductByName(String productName) throws SQLException{
+	public ArrayList<Produto> searchProductByName(String productName) throws SQLException, ClassNotFoundException{
 		return _produtosDAO.search(1,productName);
 	}
 	
-	public ArrayList<Produto> searchProductByType(String productType) throws SQLException{
+	public ArrayList<Produto> searchProductByType(String productType) throws SQLException, ClassNotFoundException{
 		return _produtosDAO.search(2,productType);
 	}
 	
-	public ArrayList<Produto> searchProductByMark(String productMark) throws SQLException{
+	public ArrayList<Produto> searchProductByMark(String productMark) throws SQLException, ClassNotFoundException{
 		return _produtosDAO.search(3,productMark);
 	}
 	
-	public ArrayList<Produto> searchProductByModel(String productModel) throws SQLException{
+	public ArrayList<Produto> searchProductByModel(String productModel) throws SQLException, ClassNotFoundException{
 		return _produtosDAO.search(4,productModel);
 	}	
 	
-	public String getNextId() throws SQLException{
+	public String getNextId() throws SQLException, ClassNotFoundException{
 		if (_produtosDAO.getMaxId() == null){
 			return "0";
 		}
 		return _produtosDAO.getMaxId();
 	}
 	
-	public boolean updateStock(String id, int qtd) throws SQLException{
+	public boolean updateStock(String id, int qtd) throws SQLException, ClassNotFoundException{
 		return _produtosDAO.stockUpdate(id, qtd); 
 	}
 	
