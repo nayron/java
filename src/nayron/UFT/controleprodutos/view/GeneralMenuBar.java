@@ -86,7 +86,7 @@ public class GeneralMenuBar extends JMenuBar{
 		_jMenuWindow.add(getJMenuItemEstoqueItem());
 		_jMenuWindow.add(getJMenuItemRelatorioVendas());
 		
-		_jMenuSkin = new JMenu("SkinTemas");
+		_jMenuSkin = new JMenu("Aparência");
 		_jMenuSkin.add(getJMenuItemSkin1());
 		_jMenuSkin.add(getJMenuItemSkin2());
 		_jMenuSkin.add(getJMenuItemSkin3());
