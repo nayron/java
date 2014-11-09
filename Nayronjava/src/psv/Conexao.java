@@ -22,7 +22,7 @@ public class Conexao {
 
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             String url = "";
-            url += "jdbc:mysql://127.0.0.1/estacionamento?";
+            url += "jdbc:mysql://127.0.0.1/estacionamentojg?";
             url += "user=root&password=abc123";
             con = DriverManager.getConnection(url);
             System.out.println("Conexão aberta.");
@@ -49,6 +49,9 @@ public class Conexao {
             } catch (Exception e) {
             System.out.println(e.getMessage());
 }
+    }
+    public static void main(String[] args){
+        abrirConexao();
     }
     
 }
