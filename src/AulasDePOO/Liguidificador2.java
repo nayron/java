@@ -9,6 +9,14 @@ package AulasDePOO;
  *
  * @author Náyron dos Anjos
  */
-public class NewClass {
-    
+public class Liguidificador2 {
+
+    public static void main(String[] args){
+        
+        Liguidificador l = new Liguidificador(3);
+        
+        System.err.println(l.obterVelocidade());
+        
+        
+    }
 }
