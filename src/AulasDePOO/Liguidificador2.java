@@ -12,10 +12,12 @@ package AulasDePOO;
 public class Liguidificador2 {
 
     public static void main(String[] args){
+       
         
-        Liguidificador l = new Liguidificador(3);
-        
-        System.err.println(l.obterVelocidade());
+        Liguidificador l = new Liguidificador(2);
+       // l.aumentarVelocidade();
+        l.diminuirVelocidade();
+        System.out.println(l.obterVelocidade());
         
         
     }
