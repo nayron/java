@@ -21,7 +21,8 @@ public class Automovel {
         combustivel = comb;
         
     }
-    public int QtoCusta(int preco){
+    public int QtoCusta(){
+        int preco = 0;
         if(combustivel == gasolina){
             preco = 4;
         
@@ -39,5 +40,7 @@ public class Automovel {
         
         
     }
+
+   
     
 }

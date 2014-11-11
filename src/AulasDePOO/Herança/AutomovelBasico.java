@@ -23,15 +23,17 @@ public class AutomovelBasico extends Automovel{
     public int qtCustas(){
         int valor;
         
-        valor = super.QtoCusta(1);
+        valor = super.QtoCusta();
         
         if(radio == true){
             valor = valor + 300;
         }else if(direcaohidraulica == true){
             valor = valor + 400;
-        }else if((radio == true) && (direcaohidraulica == true)){
+        }else if((radio == true) & (direcaohidraulica == true)){
             valor = valor + 800;
         }
+        
+        
         return valor;
     }
     
