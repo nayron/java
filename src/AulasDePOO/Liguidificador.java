@@ -13,6 +13,10 @@ public class Liguidificador {
     
     private int velocidade;
 
+    /**
+     *
+     * @param x
+     */
     public Liguidificador(int x) {
         velocidade = x;
         
