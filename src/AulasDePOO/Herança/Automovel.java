@@ -15,6 +15,7 @@ public class Automovel {
     String cor;
     int combustivel; 
     
+    
     public Automovel(int comb,String mod,String c){
         modelo = mod;
         cor = c;
