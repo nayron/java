@@ -13,7 +13,7 @@ public class Automovel {
     int maximoPrestacoes = 24;
     String modelo;
     String cor;
-    int combustivel;
+    int combustivel; 
     
     public Automovel(int comb,String mod,String c){
         modelo = mod;
