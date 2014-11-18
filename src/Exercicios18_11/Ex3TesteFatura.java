@@ -9,7 +9,7 @@ package Exercicios18_11;
  *
  * @author Náyron dos Anjos
  */
-public class TesteFatura {
+public class Ex3TesteFatura {
     
     public static void main(String[] args){
         Fatura f = new Fatura(01, "TV LED", 1, 2200);

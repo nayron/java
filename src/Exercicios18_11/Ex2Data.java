@@ -9,15 +9,12 @@ package Exercicios18_11;
  *
  * @author Náyron dos Anjos
  */
-public class Triangulo2 {
+public class Ex2Data {
     
     public static void main(String[] args){
+        Data d = new Data(18, 11, 2014);
+        d.mostraData();
         
-        Triangulo1 t = new Triangulo1(5, 5, 5);
-        
-        t.equilatero();
-        
-        System.out.println("A soma e = "+t.somaTrigangulo());
     }
     
 }
