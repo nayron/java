@@ -5,18 +5,16 @@
  */
 package Exercicios18_11;
 
-/*
+/**
  *
  * @author Náyron dos Anjos
  */
-public class Ex4Conta {
-    
+public class EX6 
+{
     public static void main(String[] args){
-        Conta c = new Conta();
-        Conta ct = new Conta(23456, "jose");
+       // AutomovelAVenda a = new AutomovelAVenda();
+        System.out.println(new AutomovelAVenda());
         
-        System.out.println("saldo apos deposito de "+c.depositar(300));
-        System.out.println("Saldo apos o saque de "+c.sacar(134));
     }
     
 }
