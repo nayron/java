@@ -11,4 +11,6 @@ package Exercicio4_Abstract;
  */
 public  abstract class Veiculo {
     
+    public abstract float acelerar(float velocidade);
+    public abstract void parar();
 }

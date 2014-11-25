@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exercicio4_Abstract;
+package Exercicio1_Abstract;
 
 /**
  *
  * @author Náyron dos Anjos
  */
-public class Motocicleta {
+public abstract class Forma {
+    
+    public abstract float CalcularArea();
+    
+    public abstract  float CalcularPrimetro();
     
 }

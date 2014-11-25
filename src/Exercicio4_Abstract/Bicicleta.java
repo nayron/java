@@ -9,25 +9,26 @@ package Exercicio4_Abstract;
  *
  * @author Náyron dos Anjos
  */
-public class Automovel extends Veiculo{
-    public float vel;
-    
-    public Automovel(float velo){
-       vel = velo;
+public class Bicicleta extends Veiculo {
+    private float vel;
+    public Bicicleta(float velo){
+        this.vel = velo;
     }
+
+    
     public float acelerar(float velocidade) {
-        velocidade += vel;
-        return velocidade;
+       velocidade += vel; 
+        return velocidade ;
+       
         
     }
 
-   
+    
     public void parar() {
+        
         vel = 0;
-        System.out.println(vel);
+        System.out.println("Bike parou == velocidade "+vel);
     }
-    public void mudarOleo(float litros){
-         System.out.println("Seu Automovel tem " + litros + "litros de oleo novo");
-     }
+     
     
 }
