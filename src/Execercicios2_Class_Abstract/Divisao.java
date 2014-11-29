@@ -16,7 +16,7 @@ public class Divisao extends OperacaoMatematica{
     public Divisao(float num1,float num2){
         if(num1 != 0){
         this.num1 = num1;
-        this.num2 = num2;
+        this.num2 = num2; 
         }else{
             System.err.println("Erro na divisao.. tire o zero do campo 1");
         }
