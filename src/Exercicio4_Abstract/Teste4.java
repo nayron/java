@@ -15,6 +15,7 @@ public class Teste4 {
         Automovel a = new Automovel(10);
         Bicicleta b = new Bicicleta(0);
         
+        
         System.out.println("Velocidade " + a.acelerar(10));
         System.out.println("Velocidade " + b.acelerar(10));
         b.parar();

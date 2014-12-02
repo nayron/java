@@ -5,6 +5,9 @@
  */
 package Exercicio1_Abstract;
 
+import java.awt.Menu;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Náyron dos Anjos
@@ -13,14 +16,22 @@ public class Teste {
 
     public static void main(String[] args) {
 
-        Retangulo r = new Retangulo(3, 2);
-        Circulo c = new Circulo(4);
         
-        System.out.println("Area do Retangulo e = "+r.CalcularArea());
-        System.out.println("Perimetro Retangulo e = "+r.CalcularPrimetro());
+        float lado = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor para lado"));
+        float altura = Float.parseFloat(JOptionPane.showInputDialog("Digite agora o valor para altura"));
         
-        System.out.println("Area do circulo e = "+c.CalcularArea());
-        System.out.println("Perimetro do Circulo e = "+c.CalcularPrimetro());
+        
+        Retangulo r = new Retangulo(lado, altura);
+        
+        JOptionPane.showMessageDialog(null,"Area do Retangulo = " + r.CalcularArea(), "Area de um Retangulo", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Perimetro do Perimetro = " + r.CalcularPrimetro(), "Perimetro do Retangulo", JOptionPane.INFORMATION_MESSAGE);
+        
+       float raio = Float.parseFloat(JOptionPane.showInputDialog("Digite um vamor para raio"));
+        Circulo c = new Circulo(raio);
+        
+       JOptionPane.showMessageDialog(null,"Area do Circulo = " + c.CalcularArea(), "Area de um circulo", JOptionPane.INFORMATION_MESSAGE);
+       JOptionPane.showMessageDialog(null,"Perimetro do circulo = " + c.CalcularArea(), "Perimetor de um circulo", JOptionPane.INFORMATION_MESSAGE);
+        
         
 
     }

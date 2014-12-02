@@ -25,13 +25,13 @@ public class Automovel {
     public int QtoCusta(){
         int preco = 0;
         if(combustivel == gasolina){
-            preco = 4;
+            preco = 400;
         
         }else if(combustivel == alcool){
-            preco = 3;
+            preco = 300;
             
         }else if(combustivel == diesel){
-            preco = 1;
+            preco = 100;
         }
         return preco;
     }

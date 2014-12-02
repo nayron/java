@@ -26,11 +26,11 @@ public class AutomovelBasico extends Automovel{
         valor = super.QtoCusta();
         
         if(radio == true){
-            valor = valor + 300;
+            valor = valor + 31500;
         }else if(direcaohidraulica == true){
-            valor = valor + 400;
-        }else if((radio == true) & (direcaohidraulica == true)){
-            valor = valor + 800;
+            valor = valor + 32600;
+        }else if((radio == true) && (direcaohidraulica == true)){
+            valor = valor +35550;
         }
         
         
