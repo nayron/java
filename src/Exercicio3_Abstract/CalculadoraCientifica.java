@@ -12,6 +12,7 @@ package Exercicio3_Abstract;
 public class CalculadoraCientifica extends Calculadora{
 
     public CalculadoraCientifica(float n1, float n2) {
+        
         super(n1, n2);
     }
       
