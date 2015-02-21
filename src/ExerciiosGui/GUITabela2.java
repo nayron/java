@@ -136,7 +136,7 @@ public class GUITabela2 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        double desc1 = 0,desc2,valor;
        if((jComboBox1.getSelectedIndex()==0) && (jComboBox2.getSelectedIndex() == 0)){
-           desc1 = 0.3;
+           desc1 = 0.03;
        }else if((jComboBox1.getSelectedIndex()==0) && (jComboBox2.getSelectedIndex() == 1)){
            desc1 = 0.1;
        }else if((jComboBox1.getSelectedIndex()==1) && (jComboBox2.getSelectedIndex() == 0)){

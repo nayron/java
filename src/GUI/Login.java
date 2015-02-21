@@ -107,6 +107,9 @@ public class Login extends javax.swing.JFrame {
             jPasswordFieldSenha.setText("");
             JOptionPane.showMessageDialog(null, "Login efetuado com sucesso");
             
+        }else if (jTextFieldLogin.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Campos não pode ficar em branco");
+            
         }else{
             JOptionPane.showMessageDialog(null, "Login ou senha estão errados!");
         }

@@ -26,6 +26,7 @@ public class CalculadoraCientifica extends Calculadora{
         return (float) Math.pow(n1, n2);
         
     }
+ 
         
         
     
