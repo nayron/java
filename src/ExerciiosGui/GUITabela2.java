@@ -145,7 +145,8 @@ public class GUITabela2 extends javax.swing.JFrame {
            desc1 = 0.08;
        }
        valor = Double.valueOf(jTextFieldCarroValor.getText());
-       desc2 = valor - (valor*desc1);  
+       //desc2 = valor - (valor*desc1);  
+       desc2 = (valor*desc1);  
        jTextFieldValorTotal.setText(""+desc2);
        jTextFieldDescontos.setText(""+(desc1*100));
        
