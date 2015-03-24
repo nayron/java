@@ -25,7 +25,7 @@ public class Exercicio3 implements Runnable {
     public void run() {
         int qtdDiv;
          
-        for (int i = 1; i < 9999; i++) {
+        for (int i = inicio; i < fim; i++) {
             qtdDiv = 0;
             for (int j = 1; j <= i; j++) {
 
