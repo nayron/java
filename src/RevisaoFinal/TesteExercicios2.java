@@ -12,17 +12,20 @@ package RevisaoFinal;
  */
 public class TesteExercicios2 {
     
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
         
-    Exercicio2 t1 = new Exercicio2("Th___1");
+    Exercicio2 t1 = new Exercicio2("Th.....1");
     t1.start();
-    Exercicio2 t2 = new Exercicio2("Th_____2");
+    t1.join();
+    Exercicio2 t2 = new Exercicio2("Th......2");
     t2.start();
-     Exercicio2 t3 = new Exercicio2("Th______3");
+    t2.join();
+     Exercicio2 t3 = new Exercicio2("Th.......3");
     t3.start();
-     Exercicio2 t4 = new Exercicio2("Th________4");
+    t3.join();
+     Exercicio2 t4 = new Exercicio2("Th........4");
     t4.start();
-        
+      t4.join();  
     }
     
 }
