@@ -8,14 +8,14 @@ public class Calcular {
 
         Scanner entrada = new Scanner(System.in);
 
-        // variáveis primitiva em um vetor
+        // variï¿½veis primitiva em um vetor
 
         int lista[] = new int[10];
 
   
         for (int i=0;i<10;i++){
 
-            System.out.print("Digite o número "+(i+1)+"o da lista: ");
+            System.out.print("Digite o nï¿½mero "+(i+1)+"o da lista: ");
 
             lista[i] = entrada.nextInt();
 
