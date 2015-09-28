@@ -5,7 +5,7 @@
  */
 package ICC;
 
-import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 public class VetorICC {
 
     public static void main(String args[]) {
-        Scanner ler = new Scanner(System.in);
+        
 
         int[] vetorUM = new int[3];
         int[] vetorDois = new int[3];
@@ -26,12 +26,13 @@ public class VetorICC {
         int pos_par = 2;
 
         for ( i = 0; i <2; i++) {
-            System.out.println("Vetor 1 ");
-            vetorUM[i] = ler.nextInt();
+            String entrada = JOptionPane.showInputDialog("Digite um valor para vetor UM");
+            vetorUM[i] = Integer.parseInt(entrada);
             vetorTres[pos_Impar] = vetorUM[i];
             pos_Impar = pos_Impar+2;
-            System.out.println("vetor 2 ");
-            vetorDois[i] = ler.nextInt();
+      
+            entrada = JOptionPane.showInputDialog("Digite um valor para vetor Dois");
+            vetorDois[i] = Integer.parseInt(entrada);
             vetorTres[pos_par] = vetorDois[i];
             pos_par=pos_par+2;
         }
