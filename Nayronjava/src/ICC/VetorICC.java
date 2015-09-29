@@ -16,6 +16,7 @@ public class VetorICC {
 
     public static void main(String args[]) {
         
+        tela l = new tela();
 
         int[] vetorUM = new int[3];
         int[] vetorDois = new int[3];
@@ -43,7 +44,8 @@ public class VetorICC {
          for( i = 0;i<6;i++){
             if(i % 2 == 0)
              {
-                 System.err.println("vetor par  - " + vetorTres[i]);
+                 //System.err.println("vetor par  - " + vetorTres[i]);
+                
              }else{
                  System.err.println("vetor impar  - " + vetorTres[i]);
              }
