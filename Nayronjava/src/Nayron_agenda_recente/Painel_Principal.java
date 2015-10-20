@@ -79,7 +79,7 @@ public class Painel_Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela");
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 51, 102));
 
         jTPesquisar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
@@ -90,7 +90,7 @@ public class Painel_Principal extends javax.swing.JFrame {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados do Contato"));
 
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
@@ -206,6 +206,7 @@ public class Painel_Principal extends javax.swing.JFrame {
             }
         });
 
+        jTTabela.setBackground(new java.awt.Color(102, 153, 255));
         jTTabela.setModel(tmContato);
         jTTabela.setSelectionMode(ListSelectionM­odel.SINGLE_SELECTION);
         lsmContato = jTTabela.getSelectionModel();
