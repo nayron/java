@@ -1,14 +1,14 @@
-package automato;
+package automatos2;
 
-public class Aut�mato {
+public class Automato {
 	private Estado[] estadosFinais;
 	private Estado estadoInicial;
 	
-	public Aut�mato() {
+	public Automato() {
 		
 	}
 	
-	public Aut�mato(Estado estadoInicial, Estado... estadosFinais) {
+	public Automato(Estado estadoInicial, Estado... estadosFinais) {
 		this.estadoInicial = estadoInicial;
 		this.estadosFinais = estadosFinais;
 	}
@@ -21,8 +21,8 @@ public class Aut�mato {
 		estadoInicial = estado;
 	}
 	
-	public boolean validarS�mbolos(char... s�mbolos) throws Exception {
-		Estado estado = estadoAtualAp�sS�mbolos(s�mbolos);
+	public boolean validarSimbolos(char... simbolos) throws Exception {
+		Estado estado = estadoAtualAposSimbolos(simbolos);
 		for (Estado estadoFinal : estadosFinais) {
 			if (estado == estadoFinal) {
 				return true;
@@ -31,9 +31,9 @@ public class Aut�mato {
 		return false;
 	}
 	
-	public Estado estadoAtualAp�sS�mbolos(char... s�mbolos) throws Exception {
+	public Estado estadoAtualAposSimbolos(char... simbolos) throws Exception {
 		if (estadoInicial == null) {
-			throw new Exception("Estado inicial n�o definido");
+			throw new Exception("Estado inicial nao definido");
 		}
 		if (estadosFinais == null || estadosFinais.length == 0) {
 			throw new Exception("Estados finais n�o definidos");
@@ -41,11 +41,11 @@ public class Aut�mato {
 		
 		Estado estadoAtual = estadoInicial;
 		
-		for (char s�mbolo : s�mbolos) {
-			estadoAtual = estadoAtual.pr�ximoEstado(s�mbolo);
+		for (char simbolo : simbolos) {
+			estadoAtual = estadoAtual.proximoEstado(simbolo);
 			
 			if (estadoAtual == null) {
-				throw new Exception("Estado sem liga��o para o s�mbolo " + s�mbolo);
+				throw new Exception("Estado sem ligacao para o simbolo " + simbolo);
 			}				
 		}
 		return estadoAtual;

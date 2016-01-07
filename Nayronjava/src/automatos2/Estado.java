@@ -1,4 +1,4 @@
-package autômato;
+package automatos2;
 
 import java.util.HashMap;
 
@@ -6,13 +6,13 @@ public class Estado {
 	public final HashMap<Character, Estado> estados
 		= new HashMap<Character, Estado>(); 
 	
-	public Estado próximoEstado(char símbolo) {			
-		return estados.get(símbolo);
+	public Estado proximoEstado(char simbolo) {			
+		return estados.get(simbolo);
 	}
 	
-	public void adicionarSaída(Estado estado, char... símbolos) {
-		for (char símbolo : símbolos) {
-			estados.put(símbolo, estado);
+	public void adicionarSaida(Estado estado, char... simbolos) {
+		for (char simbolo : simbolos) {
+			estados.put(simbolo, estado);
 		}
 	}
 }
