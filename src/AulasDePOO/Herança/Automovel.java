@@ -1,3 +1,5 @@
+
+
 /*
  //Cria os metodos QtoCusta(retornando o preço de acordo com o combustivel)
 e qtasPrestacoes(Retornando o numero maximo de prestacoes).
